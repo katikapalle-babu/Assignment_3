@@ -1,0 +1,23 @@
+//03: How to handle None values in scala for optional fields ?
+
+object caseclass extends App {
+  case class Employee(name: String, age: Option[Int], address: String, dept: String, empid: String)
+
+
+  val emp1= Employee("shobhan", None, "bangalore", "HR", "123A")
+  val emp2= Employee("babu", Some(20) ,"hyd", "IT", "123B")
+  val emp3=Employee("siva", None, "chennai", "IT", "123C")
+  val emp4= Employee("balaji", Some(23), "delhi", "HR", "123D")
+  val emp5=  Employee("manisha", Some(26), "tirupati", "HR", "123E")
+  val emp6= Employee("teja", None, "chittoor", "IT", "123F")
+
+
+ emp5.age match {
+   case Some(age)=>println(s"Age:$age")
+   case none=>println("no Age found")
+
+ }
+
+}
+
+

@@ -1,0 +1,27 @@
+  //Q2: Explain multiple inheritance use case in scala having a class called Calculator by overriding two
+// different functions : Sum, Multiply .
+
+  trait sum {
+    def sum(a: Int, b: Int): Int
+  }
+trait multiply {
+  def Multiply(a: Int, b: Int,c:Int): Int
+}
+
+  class Calculator extends sum with multiply {
+    override def sum(a: Int, b: Int): Int = a+b
+
+    override def Multiply(a: Int, b: Int,c: Int): Int = a*b*c
+  }
+  object multipleinheritenc extends App {
+
+  val cal=new Calculator()
+  val sum1=cal.sum(3,4)
+    val mul=cal.Multiply(45,5,4)
+
+
+    println(s"sum:${sum1}")
+    println(s"mul:$mul")
+}
+
+

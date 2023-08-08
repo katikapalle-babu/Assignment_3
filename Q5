@@ -1,0 +1,13 @@
+//Q5: Print fibonacci series for a given number N of type Long using pattern matching .
+
+object FibonacciSeries extends App {
+  def fibonacci(n: Long): Long = n match {
+    case 0 => 0
+    case 1 => 1
+    case _ => fibonacci(n - 1) + fibonacci(n - 2)
+  }
+  val N: Long = 10
+    val fibNum = fibonacci(N)
+    println(s"$fibNum")
+}
+
